@@ -1,26 +1,68 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
 
+# Sustainable Development
 
-### Project | Module 3 | Uber ride clusters
 
-## Project description
-Use of unsupervised machine learning to create recommendation algorithm
-Imagine you are Uber and you want to give recommendations on where drivers should be to maximize their chances of finding a ride. 
-Dataset is related to May 2014 rides in New York city.
+*[MTIMET Abdelaziz,Nesma Dehili,Radek Debek   IronHack Paris 10/12/2021]*
 
-## Project Timing and Activities
-https://trello.com/b/jeJWeXZX/project-8
+## Content
+- [Project Description](#project-description)
+- [Methodology](#Methodology )
+- [Workflow](#Workflow)
+- [Organization](#organization)
+- [Links](#links)
 
-1. Data cleaning
-2. Selection of models and optimal clusters number identification, leveraging Elbow method
-3. Models implementation and comparison
-4. Visualization including on map through folium library
+## Project Description
+We speak about Sustainable Development and the differents effort and ways countries can contribute in making our world a better one. In this project we develop and analyze data to compare countries contribution. 
 
+## Methodology
+Score out of 10: 
+If country signed Kyoto protocol 1 point
+
+from normalized co2 emissions (betwwen 0-1 closer to zero the better):
+if co2 emissions below 0.25 --> 3 points
+if co2 emissions between 0.25-0.5 -> 2 points
+if co2 emissions between 0.5-0.75 -> 1 point
+and above 0.75 -> 0 points
+
+from normalized energy consumption per capita (between 0-1 the lower the better):
+if energy consumption < 0.25 -> 3 points
+if energy consumption between 0.25-0.5 - > 2 points,
+if energy consumption between 0.5-0.75 -> 1 point
+above 0.75 -> 0 points
+
+for number of projects :
+if 0 projects -> 0 points
+if between 1-5 projects -> 1 point
+if between 5-10 projects -> 2 points
+if above 10 projects -> 3 points
+
+SO the total of these 4 parameters is max 10 points
+
+The higher the ranking the better
+
+## Workflow
+- Subjuct 
+- Data scraping 
+- Data cleaning 
+- Data normalization 
+- Score computation
+
+## Organization
+We used Jira to divide the work and organize it as the following: 
+- Choosing subject -- Sustainable Development
+- Checking data (write the python code to extract data( web scraping, exporting csv file from word)
+- Develop ER (Entity relational models): Entity, attribute, PK, FK, relation between each entity(1-1, 1-many, m-m)
+- Data description : clean data after extracting from the source, definition of the data.
+- SQL script (create database,create table and fiding it with data.)
+- Missing data ⇒ python or SQL
+- Normalization: use (Xi-Xmin)/(Xmax-Xmin)
+- Composite indicator calculation: variable x weight(influence)
+- Visiualization (slides, and test with mysql)
 
 ## Links
-- '1. csv file with clean and encoded data
-- '2. Uber.ipynb' with all code concerning data cleaning and modelling
-- '3. Slides containing results (for each model and final table with models comparison)
-- '4. Trello board 
+Include links to your repository, slides and kanban board. Feel free to include any other links associated with your project.
 
+[Repository](https://github.com/abdelaziz1990/Project-)  
+[Slides](https://github.com/abdelaziz1990/Project-/blob/main/Sustainable%20Development.%20Project%20pdf.pdf)
