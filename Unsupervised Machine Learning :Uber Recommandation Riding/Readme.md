@@ -8,7 +8,7 @@ Imagine you are Uber and you want to give recommendations on where drivers shoul
 Dataset is related to May 2014 rides in New York city.
 
 
-![Streamlit](./Figures/streamlit.png)
+![Streamlit](C:\Users\Propriétaire\Desktop\streamlit.pnj)
 
 ## Models
 
