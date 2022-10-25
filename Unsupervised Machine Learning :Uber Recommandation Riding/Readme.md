@@ -1,68 +1,52 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
+### Project | Module 3 | Uber ride clusters
 
-# Sustainable Development
+## Project description
+Use of unsupervised machine learning to create recommendation algorithm.
+Imagine you are Uber and you want to give recommendations on where drivers should be to maximize their chances of finding a ride. 
+Dataset is related to May 2014 rides in New York city.
 
 
-*[MTIMET Abdelaziz,Nesma Dehili,Radek Debek   IronHack Paris 10/12/2021]*
+![Streamlit](./Figures/streamlit.png)
 
-## Content
-- [Project Description](#project-description)
-- [Methodology](#Methodology )
-- [Workflow](#Workflow)
-- [Organization](#organization)
-- [Links](#links)
+## Models
 
-## Project Description
-We speak about Sustainable Development and the differents effort and ways countries can contribute in making our world a better one. In this project we develop and analyze data to compare countries contribution. 
+In the project we investigated 5 unsupervised machine learning models:
+- Kmeans
+- DBSCAN
+- Agglomerative clustering
+- Optics
+- Means_shift
 
-## Methodology
-Score out of 10: 
-If country signed Kyoto protocol 1 point
 
-from normalized co2 emissions (betwwen 0-1 closer to zero the better):
-if co2 emissions below 0.25 --> 3 points
-if co2 emissions between 0.25-0.5 -> 2 points
-if co2 emissions between 0.5-0.75 -> 1 point
-and above 0.75 -> 0 points
+## Project Timing and Activities
 
-from normalized energy consumption per capita (between 0-1 the lower the better):
-if energy consumption < 0.25 -> 3 points
-if energy consumption between 0.25-0.5 - > 2 points,
-if energy consumption between 0.5-0.75 -> 1 point
-above 0.75 -> 0 points
+1. Data cleaning
+2. Selection of models and optimal clusters number identification, leveraging Elbow method
+3. Models implementation and comparison
+4. Visualization including on map through folium library
 
-for number of projects :
-if 0 projects -> 0 points
-if between 1-5 projects -> 1 point
-if between 5-10 projects -> 2 points
-if above 10 projects -> 3 points
+## Comparison of the models
 
-SO the total of these 4 parameters is max 10 points
+|                           | n_clusters | Silhouette Coefficient | Variance Ratio Criterion | Davides Bouldin score |
+|---------------------------|------------|------------------------|--------------------------|-----------------------|
+| k_means                   | 5          | 0.430333496            | 39927.76148              | 0.676886623           |
+| Agglomerative_clusstering | 5          | 0.429160732            | 36744.3001               | 0.679902258           |
+| DBSCAN                    | 11         | 0.21731913             | 4126.136716              | 2.052352237           |
+| optics                    | 4094       | -0.047741133           | 20.56487453              | 1.74942336            |
+| means_shift               | 84         | 0.500448645            | 2319.937219              | 0.501251184           |
 
-The higher the ranking the better
 
-## Workflow
-- Subjuct 
-- Data scraping 
-- Data cleaning 
-- Data normalization 
-- Score computation
+Basing on the obtained results for the clustering of the data and further analysis we selected KMeans model.
 
-## Organization
-We used Jira to divide the work and organize it as the following: 
-- Choosing subject -- Sustainable Development
-- Checking data (write the python code to extract data( web scraping, exporting csv file from word)
-- Develop ER (Entity relational models): Entity, attribute, PK, FK, relation between each entity(1-1, 1-many, m-m)
-- Data description : clean data after extracting from the source, definition of the data.
-- SQL script (create database,create table and fiding it with data.)
-- Missing data ⇒ python or SQL
-- Normalization: use (Xi-Xmin)/(Xmax-Xmin)
-- Composite indicator calculation: variable x weight(influence)
-- Visiualization (slides, and test with mysql)
+## Map with pickup locations
+
+![Map](./Figures/map.png)
+
 
 ## Links
-Include links to your repository, slides and kanban board. Feel free to include any other links associated with your project.
-
-[Repository](https://github.com/abdelaziz1990/Project-)  
-[Slides](https://github.com/abdelaziz1990/Project-/blob/main/Sustainable%20Development.%20Project%20pdf.pdf)
+[Streamlit](https://project8-usml.herokuapp.com/)
+[Repository](https://github.com/Maher-Zeg/Portfolio/tree/main/Unsupervised%20Machine%20Learning%20:Uber%20Recommandation%20Riding)
+[Slides](https://docs.google.com/presentation/d/1PqQfyBkZfKNozHVBF8y-kZG94Mla6Ryp/edit?usp=sharing&ouid=102785489791173764779&rtpof=true&sd=true)
+[Trello](https://trello.com/b/jeJWeXZX/project-8)
